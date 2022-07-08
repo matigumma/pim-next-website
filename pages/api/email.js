@@ -11,15 +11,20 @@ export default async function handler(req, res) {
     });
 
     try {
-        await client.sendAsync(
-            {
-                from: mail,
-                to:'info@puertoimagenes.com.ar',
-                subject: `${name}: ${asunto}`,
-                text: message,
+        client.send({
+            from: `${name}: <${mail}>`,
+            to:'info@puertoimagenes.com.ar',
+            subject: `${name}: ${asunto}`,
+            text: message,
+        }, function (err, mess) {
+            if (err) {
+                console.log(err);
+                res.status(400).end(JSON.stringify({ message:'Error' }))
+            } else {
+                console.log(mess);
+                res.status(200).end(JSON.stringify({ message:'Sended ok' }))
             }
-        )   
-        res.status(200).end(JSON.stringify({ message:'Sended ok' }))
+        });
     } catch (error) {
         res.status(400).end(JSON.stringify({ message:'Error' }))
     }

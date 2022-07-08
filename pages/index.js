@@ -93,7 +93,7 @@ export default function Home() {
                 </div>
 
                 {/* consultas */}
-                <div className="w-full h-full flex flex-col justify-center items-center max-h-[15rem] bg-[rgb(165,165,165)]">
+                <div className="w-full h-full flex flex-col justify-center items-center py-8 bg-[rgb(165,165,165)]">
                   <h1 className="mb-2 text-2xl font-bold leading-tight text-center sm:text-3xl">
                     ¿Tiene consultas o sugerencias?
                   </h1>
