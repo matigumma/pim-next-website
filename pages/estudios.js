@@ -1,19 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import Head from 'next/head'
 import Link from 'next/link'
-
-import Carousel from '../components/carousel'
 
 export default function Estudios() {
     return(
             <div className="">
-            <Head>
-                <title>Puerto Imágenes Médicas Mar del Plata </title>
-                <meta name="description" content="Centro de diagnostico por imágenes en zona puerto de Mar del Plata - Bermejo 446" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-
             <div className='drawer '>
                 <input id="my-drawer-3" type="checkbox" className="drawer-toggle" /> 
 

@@ -1,14 +1,11 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import { useState } from 'react'
-import Head from 'next/head'
 import Link from 'next/link'
 import axios from 'axios'
 
-import Carousel from '../components/carousel'
-
 export default function Estudios() {
-    const [status, setStatus]=useState<'sent' | 'sending' | 'error' | 'iddle'>('iddle')
+    const [status, setStatus]=useState('iddle');
     const [email, setEmail]=useState({})
 
     const SendMail = async (e)=>{
@@ -17,7 +14,7 @@ export default function Estudios() {
 
         console.log('form data: ', email);
 
-        axios.post('http://localhost:3000/api/email', email)
+        axios.post('/api/email', email)
         .then((res)=>{
             alert('Send Mail To You')
             setEmail('')
@@ -30,12 +27,6 @@ export default function Estudios() {
 
     return(
             <div className="">
-            <Head>
-                <title>Puerto Imágenes Médicas Mar del Plata </title>
-                <meta name="description" content="Centro de diagnostico por imágenes en zona puerto de Mar del Plata - Bermejo 446" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-
             <div className='drawer '>
                 <input id="my-drawer-3" type="checkbox" className="drawer-toggle" /> 
 
