@@ -2,27 +2,31 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState } from 'react'
 import Link from 'next/link'
-import axios from 'axios'
 
 export default function Estudios() {
     const [status, setStatus]=useState('iddle');
-    const [email, setEmail]=useState({})
 
-    const SendMail = async (e)=>{
-        e.preventDefault();
+    const Userdata = async event => {
+        event.preventDefault()
         setStatus('sending')
 
-        console.log('form data: ', email);
-
-        axios.post('/api/email', email)
-        .then((res)=>{
-            alert('Send Mail To You')
-            setEmail('')
+        let userdata= {
+            asunto: event.target.asunto.value,
+            name: event.target.name.value,
+            mail: event.target.email.value,
+            message: event.target.message.value
+        }
+    
+        try {
+            await fetch('/api/email', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(userdata)
+            })
             setStatus('sent')
-        }).catch((e) => {
-            console.log(e)
+        } catch (error) {
             setStatus('error')
-        })
+        }
     }
 
     return(
@@ -130,39 +134,39 @@ export default function Estudios() {
                                             formulario a continuación y recibirá una <br />
                                             pronta respuesta. ¡Estamos para atenderlo!
                                         </div>
-                                        <form className="flex flex-col items-center">
+                                        <form className="flex flex-col items-center" onSubmit={(ev) => Userdata(ev)}>
                                             <div className="flex flex-col items-center justify-center w-full">
                                                 <label htmlFor="name" className="text-2xl font-bold leading-tight text-center sm:text-2xl text-[#fff]">
                                                     Nombre Completo
                                                 </label>
-                                                <input onChange={(e)=>setEmail({...email, name: e.target.value})} className="w-full p-3 rounded-lg placeholder:text-mainpim placeholder:font-light font-light text-mainpim bg-[#ecece7]" type="text" name="name" id="name" placeholder="Nombre completo*" />
+                                                <input className="w-full p-3 rounded-lg placeholder:text-mainpim placeholder:font-light font-light text-mainpim bg-[#ecece7]" type="text" name="name" id="name" placeholder="Nombre completo*" />
                                             </div>
                                             <div className="flex flex-col items-center justify-center w-full">
                                                 <label htmlFor="email" className="text-2xl font-bold leading-tight text-center sm:text-2xl text-[#fff]">
                                                     E-mail
                                                 </label>
-                                                <input onChange={(e)=>setEmail({...email, mail: e.target.value})} className="w-full p-3 rounded-lg placeholder:text-mainpim placeholder:font-light font-light text-mainpim bg-[#ecece7]" type="email" name="email" id="email" placeholder="E-mail*" />
+                                                <input className="w-full p-3 rounded-lg placeholder:text-mainpim placeholder:font-light font-light text-mainpim bg-[#ecece7]" type="email" name="email" id="email" placeholder="E-mail*" />
                                             </div>
                                             <div className="flex flex-col items-center justify-center w-full">
                                                 <label htmlFor="asunto" className="text-2xl font-bold leading-tight text-center sm:text-2xl text-[#fff]">
                                                     Asunto
                                                 </label>
-                                                <input onChange={(e)=>setEmail({...email, asunto: e.target.value})} className="w-full p-3 rounded-lg placeholder:text-mainpim placeholder:font-light font-light text-mainpim bg-[#ecece7]" type="text" name="asunto" id="asunto" placeholder="Asunto*" />
+                                                <input className="w-full p-3 rounded-lg placeholder:text-mainpim placeholder:font-light font-light text-mainpim bg-[#ecece7]" type="text" name="asunto" id="asunto" placeholder="Asunto*" />
                                             </div>
                                             <div className="flex flex-col items-center justify-center w-full">
                                                 <label htmlFor="message" className="text-2xl font-bold leading-tight text-center sm:text-2xl text-[#fff]">
                                                     Mensaje
                                                 </label>
-                                                <textarea onChange={(e)=>setEmail({...email, message: e.target.value})} className="w-full p-3 bg-[#ecece7] placeholder:text-mainpim placeholder:font-light font-light text-mainpim rounded-lg min-h-[8rem]" name="message" id="message" placeholder="Mensaje*" />
+                                                <textarea className="w-full p-3 bg-[#ecece7] placeholder:text-mainpim placeholder:font-light font-light text-mainpim rounded-lg min-h-[8rem]" name="message" id="message" placeholder="Mensaje*" />
                                             </div>
                                             <div className="flex flex-row items-center justify-end w-full ">
-                                                <button onClick={SendMail} disabled={status==='sending'} className="flex items-center text-[14px] font-bold leading-none uppercase rounded-lg lg:min-h-14 btn bg-mainpim border-none my-4">
+                                                <button type="submit" disabled={status==='sending'} className="flex items-center text-[14px] font-bold leading-none uppercase rounded-lg lg:min-h-14 btn bg-mainpim border-none my-4 disabled:text-[#999]">
                                                     Enviar Consulta
                                                 </button>
                                             </div>
                                             {status === 'error' && (
                                                 <div className="flex flex-col items-center justify-center w-full">
-                                                    <h1 className="text-2xl font-bold leading-tight text-center sm:text-2xl text-[#fff]">
+                                                    <h1 className="text-2xl font-bold leading-tight text-center sm:text-2xl text-mainpim">
                                                         Ha ocurrido un error, por favor intente nuevamente.
                                                     </h1>
                                                 </div>

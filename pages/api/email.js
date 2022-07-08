@@ -1,6 +1,7 @@
 import { SMTPClient } from 'emailjs';
 
 export default async function handler(req, res) {
+    const { name, asunto, message, mail } = req.body;
 
     const client = new SMTPClient({
         user: 'info@puertoimagenes.com.ar',
@@ -12,15 +13,14 @@ export default async function handler(req, res) {
     try {
         await client.sendAsync(
             {
-                from: req.data.mail,
+                from: mail,
                 to:'info@puertoimagenes.com.ar',
-                subject: req.data.asunto,
-                text: req.data.message,
+                subject: `${name}: ${asunto}`,
+                text: message,
             }
         )   
         res.status(200).end(JSON.stringify({ message:'Sended ok' }))
     } catch (error) {
         res.status(400).end(JSON.stringify({ message:'Error' }))
     }
-    res.status(200).end(JSON.stringify({ message:'Send Mail' }))
 }
