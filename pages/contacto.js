@@ -16,17 +16,32 @@ export default function Estudios() {
             mail: event.target.email.value,
             message: event.target.message.value
         }
-    
-        try {
-            await fetch('/api/email', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify(userdata)
-            })
-            setStatus('sent')
-        } catch (error) {
+
+        fetch('/api/email', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(userdata)
+        }).then((res) => {
+            console.log('Response received: ', res.status);
+            if (res.status === 200) {
+                console.log('Response succeeded!')
+                setStatus('sent')
+            }
+            if (res.status === 400) {
+                console.log('Response failed!')
+                setStatus('error')
+            }
+            if (res.status === 404) {
+                console.log('Response failed!')
+                setStatus('error')
+            }
+        }).catch((err) => {
+            console.log('Response failed!')
             setStatus('error')
-        }
+        });
     }
 
     return(
@@ -160,12 +175,12 @@ export default function Estudios() {
                                                 <textarea className="w-full p-3 bg-[#ecece7] placeholder:text-mainpim placeholder:font-light font-light text-mainpim rounded-lg min-h-[8rem]" name="message" id="message" placeholder="Mensaje*" />
                                             </div>
                                             <div className="flex flex-row items-center justify-end w-full ">
-                                                <button type="submit" disabled={status==='sending'} className="flex items-center text-[14px] font-bold leading-none uppercase rounded-lg lg:min-h-14 btn bg-mainpim border-none my-4 disabled:text-[#999]">
+                                                <button type="submit" disabled={status==='sending'} className="flex items-center text-[14px] font-bold leading-none uppercase rounded-lg lg:min-h-14 btn bg-mainpim border-none my-4 disabled:text-[#999] disabled:loading">
                                                     Enviar Consulta
                                                 </button>
                                             </div>
                                             {status === 'error' && (
-                                                <div className="flex flex-col items-center justify-center w-full">
+                                                <div className="flex flex-col items-center justify-center w-full bg-[#f87171] rounded-lg ">
                                                     <h1 className="text-2xl font-bold leading-tight text-center sm:text-2xl text-mainpim">
                                                         Ha ocurrido un error, por favor intente nuevamente.
                                                     </h1>
