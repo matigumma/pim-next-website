@@ -17,6 +17,7 @@ module.exports = {
         "strong": "2px 5px 5px rgba(0, 0, 0, 0.7)",
       },
       backgroundImage: {
+        "novedades": "url('/assets/images/novedades.png')",
         "logoFooter": "url('/assets/images/logo-footer.svg')",
         "logoLarge": "url('/assets/images/logo-large.svg')",
         "logoSmall": "url('/assets/images/logo-small.svg')",
@@ -53,7 +54,7 @@ module.exports = {
   plugins: [require("daisyui")],
   daisyui: {
     themes: [
-      'emerald'
+      'cmyk'
     ],
   }
 }

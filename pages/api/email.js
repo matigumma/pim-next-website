@@ -1,27 +1,39 @@
-import { SMTPClient } from 'emailjs';
 
-export default function handler(req, res) {
-    const { name, asunto, message, mail } = req.body;
+export default async function email(req, res) {  
+    const { body } = req.body;
+    
+    const options = {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json', 
+            'Content-Type': 'application/json', 
+            'api-key': process.env.SENDINBLUE_API_KEY
+        },  
+        body: JSON.stringify({
+            to: [{email: 'info@puertoimagenes.com.ar'}],
+            replyTo: {email: body.mail},
+            templateId: 1,
+            params: {NAME: body.name, ASUNTO: body.asunto, MESSAGE: body.message},
+        }),
+    };
 
-    const client = new SMTPClient({
-        user: process.env.EMAIL_ACCOUNT,
-        password: process.env.EMAIL_PASSWORD,
-        host: process.env.EMAIL_HOST,
-        ssl:true
-    });
-
-    client.send({
-        from: `${name}: <${mail}>`,
-        to:'info@puertoimagenes.com.ar',
-        subject: `${name}: ${asunto}`,
-        text: message,
-    }, function (err, mess) {
-        if (err) {
-            console.log(err);
-            res.status(400).end(JSON.stringify({ message:'Error' }))
-        } else {
-            console.log(mess);
-            res.status(200).end(JSON.stringify({ message:'Sended ok' }))
-        }
-    });
+    await fetch('https://api.sendinblue.com/v3/smtp/email', options)
+        .then(response => response.json())
+        .then((onfulfilled) => {
+            res.status(200).json({
+                message: 'Mensaje enviado correctamente',
+                data: onfulfilled.messageId
+            });
+        },
+        (onrejected) => {
+            res.status(400).json({
+                message: 'Error al enviar el mensaje',
+                data: onrejected.code
+            });
+        })
+        .catch(err => 
+            res.status(500).json({
+                message: 'Error al enviar el mensaje',
+            })
+        );
 }
