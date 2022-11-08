@@ -173,7 +173,7 @@ export default function Header() {
             </li>
             <li className="flex items-center lg:w-[106px] xl:w-[136px] text-[14px] font-bold leading-none uppercase rounded-lg lg:min-h-14 btn bg-mainpim border-none btn-block">
             <a href="http://puertoimagenes.ddns.net:10001" target="_blank" rel="noreferrer">
-                Ver Informe
+                Acceso Profesionales
             </a>
             </li>
         </ul>

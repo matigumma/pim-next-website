@@ -52,7 +52,7 @@ export default function Drawerside() {
                 </li>
                 <li className="flex items-center justify-center text-[15px] font-bold leading-tight uppercase rounded-lg btn bg-secpim btn-block text-mainpim hover:text-[#fff] border-none">
                     <a href="http://puertoimagenes.ddns.net:10001" target="_blank" rel="noreferrer">
-                        Ver Informe
+                        Acceso Profesionales
                     </a>
                 </li>
             </ul>
