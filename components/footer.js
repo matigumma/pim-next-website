@@ -12,7 +12,7 @@ export default function Footer() {
                         </a>
                         <a href="https://wa.me/5492233489143?text=Hola" className='inline-flex items-center gap-3 font-normal'>
                             <picture className="inline-block bg-wa w-[1rem] h-[1rem] bg-contain bg-no-repeat" />
-                            223 34 89 143
+                            223 35 49 036
                         </a>
                         <span className='pt-2 font-semibold'>Bermejo 446, Mar del Plata (7600)</span>
                     </div>
@@ -46,7 +46,7 @@ export default function Footer() {
             </footer>
 
             <div className="fixed rounded-full p-1 bg-[rgb(75,166,54)] bottom-4 right-2 animate-wiggle lg:bottom-6 lg:right-6 z-10 hover:scale-110">
-                <a href="https://wa.me/5492233489143?text=Quisiera%20pedir%20un%20turno" className="text-[#eaeaea]" target="_blank" rel="noreferrer">
+                <a href="https://wa.me/5492233549036?text=Quisiera%20pedir%20un%20turno" className="text-[#eaeaea]" target="_blank" rel="noreferrer">
                     <svg
                         stroke="currentColor"
                         fill="currentColor"
