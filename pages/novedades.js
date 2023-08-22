@@ -64,48 +64,30 @@ export default function Estudios() {
                         </h2>
                         <p className="text-base text-left">
                             <ul className='columns-2'>
-                                <li>
-                                    Art Prevención
-                                </li>
-                                <li>
-                                    A.M.A.T- COFACO
-                                </li>
-                                <li>
-                                    Assist- card
-                                </li>
-                                <li>
-                                    Avalian- Acá salud
-                                </li>
-                                <li>
-                                    Grupo Roisa
-                                </li>
-                                <li>
-                                    Mutual 23 de diciembre
-                                </li>
-                                <li>
-                                    Meplife
-                                </li>
-                                <li>
-                                    Oam
-                                </li>
-                                <li>
-                                    Osdop
-                                </li>
-                                <li>
-                                    Oseiv
-                                </li>
-                                <li>
-                                    Ospat
-                                </li>
-                                <li>
-                                    Thema
-                                </li>
-                                <li>
-                                    Whope
-                                </li>
-                                <li>
-                                    Coomarpes
-                                </li>
+                                <li>ACA Salud</li>
+                                <li>ART Prevención</li>
+                                <li>Assist-Card</li>
+                                <li>Avalian</li>
+                                <li>COFACO</li>
+                                <li>COOMARPES</li>
+                                <li>Grupo Roisa</li>
+                                <li>MEDIFE</li>
+                                <li>MepLife</li>
+                                <li>Mutual 23 de Diciembre (OSPIV – ALL SALUD -- MEDICENTER)</li>
+                                <li>NATIVUS-SANOS</li>
+                                <li>OAM</li>
+                                <li>OSDEPYM Plan 800/1000/2000/2500/4000/PE</li>
+                                <li>OSDOP</li>
+                                <li>OSECAC</li>
+                                <li>OSEIV</li>
+                                <li>OSPAT</li>
+                                <li>OSPROTURA</li>
+                                <li>OSPERSAAMS</li>
+                                <li>Sancor Salud</li>
+                                <li>Santa Clara Salud (SC salud)</li>
+                                <li>THEMA</li>
+                                <li>UOM</li>
+                                <li>Williams Hope</li>
                             </ul>
                         </p>
                     </div>

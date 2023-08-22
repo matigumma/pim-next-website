@@ -168,7 +168,7 @@ export default function Contacto() {
                                     <g><path style={{opacity: 1}} fill="#2a4366" d="M 34.5,27.5 C 36.1992,27.3398 37.8659,27.5065 39.5,28C 52.3921,38.5633 65.5588,48.73 79,58.5C 92.1072,49.064 104.941,39.2306 117.5,29C 120.714,26.5557 123.048,27.0557 124.5,30.5C 124.124,32.3829 123.124,33.8829 121.5,35C 108.215,44.6171 95.2149,54.6171 82.5,65C 81.2713,65.7811 79.938,66.2811 78.5,66.5C 63.2617,55.4377 48.4284,43.771 34,31.5C 33.4209,30.0715 33.5876,28.7382 34.5,27.5 Z"/></g>
                                 </svg>
                                 </picture>
-                                <span className=' text-[14px] sm:text-base break-words w-full pr-6'>secretaria@puertoimagenes.com.ar</span>
+                                <span className=' text-[14px] sm:text-base break-words w-full pr-6'>contacto@puertoimagenes.com.ar</span>
                             </a>
                             <a href="https://www.google.com/maps/place/Bermejo+446,+B7603BQJ+Mar+del+Plata,+Provincia+de+Buenos+Aires/@-38.043407,-57.5489029,16.57z/data=!4m5!3m4!1s0x9584dddc17ab7d91:0x3b61c42a3c3d9848!8m2!3d-38.0432993!4d-57.5467391" className='inline-flex items-center gap-6 font-normal' target="_blank" rel="noreferrer">
                                 <picture className="inline-block w-[1.5rem] h-[1.8rem] bg-contain bg-no-repeat">
