@@ -145,7 +145,7 @@ export default function Contacto() {
 
                                 223 56 81 552
                             </a>
-                            <a href="https://wa.me/5492233549036?text=Hola" className='inline-flex items-center gap-6 font-normal'>
+                            <a href="https://wa.me/5492236352000?text=Hola" className='inline-flex items-center gap-6 font-normal'>
                                 <picture className="inline-block w-[1.5rem] h-[1.5rem] bg-contain bg-no-repeat">
                                     <svg viewBox="0 0 197 197" width="1.5rem" height="1.5rem" style={{shapeRendering: 'geometricPrecision', textRendering: 'geometricPrecision', imageRendering: 'optimizeQuality', fillRule: 'evenodd', clipRule: 'evenodd'}}>
                                         <g><path style={{opacity: 1}} fill="#fff" d="M -0.5,0.5 C 64.8333,0.5 130.167,0.5 195.5,0.5C 195.5,65.8333 195.5,131.167 195.5,196.5C 130.167,196.5 64.8333,196.5 -0.5,196.5C -0.5,131.167 -0.5,65.8333 -0.5,0.5 Z"/></g>
@@ -157,7 +157,7 @@ export default function Contacto() {
                                         <g><path style={{opacity: 1}} fill="#5f6f8b" d="M 74.5,177.5 C 77.1522,177.41 79.4855,178.076 81.5,179.5C 78.8478,179.59 76.5145,178.924 74.5,177.5 Z"/></g>
                                     </svg>
                                 </picture>
-                                223 35 49 036
+                                223 63 52 000
                             </a>
                             <a href="https://wa.me/5492233489143?text=Hola" className='inline-flex items-center gap-6 font-normal'>
                                 <picture className="inline-block w-[1.5rem] h-[1.5rem] bg-contain bg-no-repeat">

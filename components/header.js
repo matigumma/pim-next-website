@@ -167,7 +167,7 @@ export default function Header() {
         </ul>
         <ul className="flex justify-between lg:mr-3 lg:gap-6">
             <li className="flex items-center lg:w-[106px] xl:w-[136px] text-[14px] font-bold leading-none uppercase rounded-lg lg:min-h-14 btn bg-primpim border-none btn-block">
-                <a href="https://wa.me/5492233549036?text=Quisiera%20pedir%20un%20turno" target="_blank" rel="noreferrer">
+                <a href="https://wa.me/5492236352000?text=Quisiera%20pedir%20un%20turno" target="_blank" rel="noreferrer">
                     Sacar Turno
                 </a>
             </li>
