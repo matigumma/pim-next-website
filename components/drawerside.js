@@ -46,7 +46,7 @@ export default function Drawerside() {
                     </Link>
                 </li>
                 <li className="flex items-center justify-center text-[15px] font-bold leading-tight uppercase rounded-lg btn bg-mainpim btn-block">
-                    <a href="https://wa.me/5492233489143?text=Quisiera%20pedir%20un%20turno" target="_blank" rel="noreferrer">
+                    <a href="https://wa.me/5492236352000?text=Quisiera%20pedir%20un%20turno" target="_blank" rel="noreferrer">
                         Sacar Turno
                     </a>
                 </li>

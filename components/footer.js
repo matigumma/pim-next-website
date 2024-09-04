@@ -10,7 +10,7 @@ export default function Footer() {
                             <picture className="inline-block bg-phone w-[1rem] h-[1rem] bg-contain bg-no-repeat" />
                             223 56 81 552
                         </a>
-                        <a href="https://wa.me/5492233489143?text=Hola" className='inline-flex items-center gap-3 font-normal'>
+                        <a href="https://wa.me/5492236352000?text=Hola" className='inline-flex items-center gap-3 font-normal'>
                             <picture className="inline-block bg-wa w-[1rem] h-[1rem] bg-contain bg-no-repeat" />
                             223 63 52 000
                         </a>

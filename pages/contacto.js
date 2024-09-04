@@ -159,7 +159,7 @@ export default function Contacto() {
                                 </picture>
                                 223 63 52 000
                             </a>
-                            <a href="https://wa.me/5492233489143?text=Hola" className='inline-flex items-center gap-6 font-normal'>
+                            <a href="https://wa.me/5492236352000?text=Hola" className='inline-flex items-center gap-6 font-normal'>
                                 <picture className="inline-block w-[1.5rem] h-[1.5rem] bg-contain bg-no-repeat">
                                 <svg viewBox="40 0 115 156" width="2rem" height="2rem" style={{shapeRendering: 'geometricPrecision', textRendering: 'geometricPrecision', imageRendering: 'optimizeQuality', fillRule: 'evenodd', clipRule: 'evenodd'}}>
                                     <g><path style={{opacity: 1}} fill="#fff" d="M -0.5,0.5 C 51.5,0.5 103.5,0.5 155.5,0.5C 155.5,38.5 155.5,76.5 155.5,114.5C 103.5,114.5 51.5,114.5 -0.5,114.5C -0.5,76.5 -0.5,38.5 -0.5,0.5 Z"/></g>
