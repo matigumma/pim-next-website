@@ -67,7 +67,7 @@ export default function Misestudios() {
                 <br />
                 <div className="w-full min-h-[600px]">
                     <iframe 
-                        src="http://puertoimagenes.ddns.net:10001" 
+                        src="https://portal.puertoimagenes.com.ar:11001" 
                         className="w-full h-full" 
                         frameBorder="0" 
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 

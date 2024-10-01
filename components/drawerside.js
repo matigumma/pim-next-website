@@ -51,7 +51,7 @@ export default function Drawerside() {
                     </a>
                 </li>
                 <li className="flex items-center justify-center text-[15px] font-bold leading-tight uppercase rounded-lg btn bg-secpim btn-block text-mainpim hover:text-[#fff] border-none">
-                    <a href="http://puertoimagenes.ddns.net:10001" target="_blank" rel="noreferrer">
+                    <a href="https://portal.puertoimagenes.com.ar:11001" target="_blank" rel="noreferrer">
                         Acceso Profesionales
                     </a>
                 </li>
