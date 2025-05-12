@@ -58,7 +58,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className='flex w-full'>
+          <section className='flex w-full bg-primpim'>
             <div className='relative flex flex-col h-[400px] w-full'>
               <div className="absolute z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-4 lg:gap-2 ">
                 <div className="flex flex-col">
@@ -74,7 +74,7 @@ export default function Home() {
                     </button>
                 </Link>
               </div>
-              <img src="/assets/images/novedades.jpeg" alt="tus estudios mas cerca" className="object-cover object-left w-full h-full brightness-75"/>
+              {/* <img src="/assets/images/novedades.jpeg" alt="tus estudios mas cerca" className="object-cover object-left w-full h-full brightness-75"/> */}
             </div>
           </section>
 
